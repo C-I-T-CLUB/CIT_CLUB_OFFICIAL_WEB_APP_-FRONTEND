@@ -1,0 +1,86 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+.signup_main{
+    background-image: linear-gradient(to bottom, rgba(1, 36, 86, 0.5)35%, rgba(1, 36, 86, .9)65%), url(../images/header-bacground.jpg);
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+.signup_section{
+    background-color: #f8f8ffe5;
+    width: 25%;
+    position: absolute;
+    top: 10%;
+    left: 35%;
+    padding: 2% 2% 2% 2%;
+}
+.signup_caption{
+    display: block;
+    font-size: 2em;
+    margin-bottom: 4%;
+}
+.form_section__div{
+    margin: 0 0 4% 0;
+}
+.label_style{
+    text-transform: capitalize;
+    font-size: 2em;
+}
+.signup_input{
+    display: block;
+    width: 100%;
+    height: 6vh;
+    border-radius: .2em;
+    border: none;
+    padding-left: 2%;
+    background-color: rgba(1, 36, 86, 0.418);
+    color: #f8f8ff;
+}
+.signup_input:focus{
+    outline: .1em #f8f8ff solid;
+    font-size: .7em;
+}
+.signup_input::placeholder{
+    color: #f8f8ff;
+}
+.star{
+    color: red;
+}
+.sigup_btn{
+    margin: 2% 0 4% 0;
+    background-color:#007FFF;
+    width: 100%;
+    height: 6vh;
+    border: none;
+    border-radius: .2em;
+    text-transform: capitalize;
+    color: #f8f8ff;
+    font-size: 1.5em;
+}
+.agreement_txt{
+    font-size: 1.6em;
+}
+.agreement_txt a{
+    text-decoration: none;
+    color: blue;
+}
+/*index page button*/
+.back_btn{
+    background-color:#34343438;
+    position: absolute;
+    top: 90%;
+    left: 44%;
+    height: 8vh;
+    width: 6%;
+    padding: 1.2em .1em .1em .5em;
+}
+.back_btn a{
+    text-transform: capitalize;
+    text-decoration: none;
+    color: #f8f8ff;
+    font-size: 2em;
+}

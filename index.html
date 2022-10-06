@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CIT CLUB | MULTIMEDIA UNIVERSITY OF KENYA</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <!-- Link to google fonts API -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <!-- The favicon -->
+    <link rel="shortcut icon" href="./logo.jpg" type="image/x-icon">
+    <!-- the local css files links -->
+    <link rel="stylesheet" href="./css/app.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/heading.css">
+    <link rel="stylesheet" href="./css/side_navigation.css">
+    <!-- Fontawesome links -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/fontawesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/fontawesome.css">
+    <!-- pointing to local javascript file -->
+    <script src="./src/side_nav.js"></script>
+</head>
+<body>
+    <!-- This is the header section -->
+    <header class="style">
+        <!-- The navigation links -->
+        <nav class="row_nav">
+            <div class="nav_column">
+                 <img src="./images/logo-removebg-preview.png" alt="cit club logo" srcset="./images/logo-removebg-preview.png" class="logo_style">
+            </div>
+            <div class="nav_column nav_column__row">
+                <li class="style_list display_drop"> <a href="#">resources
+                    <img  class="postion_arrow" src="./cit club design/icon/arrow-down-svgrepo-com.svg" alt="">
+                </a>   
+                      <ul class="drop_down">
+                            <a href="#">past papers</a>
+                            <a href="#">projects</a>
+                            <a href="#">blogs</a>
+                            <a href="#">tech news</a>
+                            <a href="#">tech inverviews</a>
+                      </ul>
+                </li>  
+               <a  href="./html/event.html"  class="style_list">events</a>
+               <a  href="#" class="style_list">gallery</a>
+               <a  href="./html/OurTeam.html" class="style_list">our team</a>
+               <a  href="#" class="style_list">find developer</a> 
+               <li href="#" class="style_list display_drop "><a href="#">accounts
+                    <img  class="postion_arrow" src="./cit club design/icon/arrow-down-svgrepo-com.svg" alt=""></a>
+                    <ul class="drop_down">
+                        <a href="./html/signup.html">sign up</a>
+                        <a href="./html/login.html" class="btn_login_white">login</a>
+                        <a href="./html/registration.html">Join CIT CLuB</a>
+                    </ul>
+                </li>       
+            </div>
+        </nav>
+        <!-- side bar navigation -->
+        <div class="side_nav" id="side_bar__nav">
+            <a href="javascript:void(0)" class="side_nav_close" onclick="close_nav()">&times;</a>
+            <a href="./html/registration.html" class="side_nav_btn">register</a>
+            <a href="#" class="side_nav_btn">events</a>
+            <a href="#" class="side_nav_btn">support us</a>
+        </div>
+            <span class="open_nav__btn" onclick="open_nav()">&#9776;</span>
+        
+        <!-- inspirations -->
+        <!-- <div class="inspired">
+            <a href="#" class="inspire_link"><span class="inspire_link_text">inspiration</span></a>
+        </div>
+        <div class="header_text">
+            <div class="header_text_para">
+                <h1 class="primary_heading">started by students</h1>
+            </div>
+            <div class="header_text_para">
+                <h1 class="primary_heading">run by students</h1>
+            </div>
+        </div> -->
+    </header>
+    <!-- Main section of the page -->
+    <!-- This section will display the blogs that are fetched via an API and refreshed after 24 hours -->
+    <main class="style_main">
+        <!-- This is the section that appears first when user visits the website -->
+        <section class="landing_section">
+            <div class="text_div">
+                <h1 class="heading_primary lading_section_style">
+                    Started by Students <br>
+                    Run by Students
+                </h1>
+                <a class="join_citclub" href="./html/registration.html">Join CIT CLUB</a>
+            </div>
+            <div class="img_div">
+                <img class="img_div__style" src="./cit club design/illustrations/undraw-android.svg" alt="">
+            </div>
+        </section>
+
+        <!-- resources section  -->
+        <h2 class="section_title">Resources</h2>
+        <section class="resources_section">
+                <aside class="svg_holder">
+                    <img src="cit club design/illustrations/undraw_exams_g4ow.svg" alt="exam" class="svg_illustration">
+                </aside>
+
+                <article class="resources_text">
+                    <p>
+                        Worried about exams? Well, worry no more,
+                         CIT Club got you covered. Click below to view past paper university examinations.
+                    </p>
+                    <a href="#" class="view_resources_btn">
+                        View Resources
+                    </a>
+                </article>
+
+        </section>
+
+        <!-- projects section  -->
+        <h2 class="section_title">Projects</h2>
+        <section class="projects_section">
+            <p>
+                As a club, we value practical projects that work to solve problems in our community.<br>
+                Here are some of the projects we have worked on.
+            </p>
+
+            <aside class="projects_holder">
+                <!-- PWA  -->
+                <aside class="project_card">
+                    <img src="cit club design/pexels-designecologist-1779487.jpg" alt="project1" class="pro_img">
+                    <p>
+                        We've made a progressive web app(PWA) and published it.
+                    </p>
+                    <a href="#" class="view_resources_btn">
+                      View
+                    </a>
+                </aside>
+
+                <!-- project 2  -->
+                <aside class="project_card">
+                    <img src="cit club design/pexels-tyler-lastovich-699122.jpg" alt="project1" class="pro_img">
+                    <p>
+                        We've made an android app and published it.
+                    </p>
+                    <a href="#" class="view_resources_btn">
+                      View
+                    </a>
+                </aside>
+
+                <!-- PWA  -->
+                <aside class="project_card">
+                    <img src="cit club design/pexels-designecologist-1779487.jpg" alt="project1" class="pro_img">
+                    <p>
+                        We've made a progressive web app(PWA) and published it.
+                    </p>
+                    <a href="#" class="view_resources_btn">
+                      View
+                    </a>
+                </aside>
+            </aside>
+
+            <a href="#" class="more_projects_btn">
+               <span> 
+                   More Projects 
+                <img src="cit club design/icon/arrow-down-svgrepo-com.svg" alt="next" class="twist_icon">
+                <img src="cit club design/icon/arrow-down-svgrepo-com.svg" alt="next" class="twist_icon">
+            </span>
+            </a>
+        </section>
+
+        <!-- developer section  -->
+        <h2 class="section_title">Find a developer</h2>
+        <section class="dev_section">
+            <article class="resources_text">
+                <p>
+                    Have a project you are working on and in need of <span class="highlight_text">professional</span>
+                    I.T skills? Find a <span class="highlight_text">compenent</span> developer amongst us.
+                </p>
+                <a href="#" class="view_resources_btn">
+                    Find Developer
+                </a>
+            </article>
+            <aside class="svg_holder svg_bg">
+                <img src="cit club design/illustrations/lady_coding.svg" alt="developer" class="svg_illustration">
+            </aside>
+        </section>
+
+    </main>
+    <!-- Footer section -->
+    <footer>
+        <div class="part">
+            <img src="./images/logo-removebg-preview.png" alt="cit club logo" srcset="./images/logo-removebg-preview.png" class="footer_logo">
+        </div>
+        <div class="part">
+            <h3 class="footer_title">
+                Our Address
+            </h3>
+            <ul>
+                <li>Nairobi, Kenya</li>
+                <li>Multimedia University Of Kenya</li>
+                <li>P.O Box 15653 - 00503</li>
+            </ul>
+        </div>
+        <div class="part">
+            <h3 class="footer_title">
+                Call Us
+            </h3>
+            <ul>
+                <li><i class="fas fa-phone-alt"></i> Paullaster Okoth </li>
+                <li><i class="fas fa-phone-alt"></i> Stephen Kamau </li>
+                <li><i class="fas fa-phone-alt"></i> Dan Santiago </li>
+            </ul>
+        </div>
+        <div class="part">
+            <h3 class="footer_title">
+                Sponsors
+            </h3>
+            <ul>
+                <li>Multimedia University Of Kenya</li>
+                <li>Virdismart Global</li>
+                <li>Meta Ajax Technology Agencies</li>
+            </ul>
+        </div>
+        <div class="part">
+            <h3 class="footer_title">
+                Follow Us
+            </h3>
+            <ul>
+                <li><i class="fab fa-twitter"></i> Twitter</li>
+                <li><i class="fab fa-github"></i> Github</li>
+                <li><i class="fas fa-envelope"></i> Email</li>
+                <li><i class="fab fa-whatsapp"></i> Whatsapp</li>
+            </ul>
+        </div>
+    </footer>
+</body>
+</html>

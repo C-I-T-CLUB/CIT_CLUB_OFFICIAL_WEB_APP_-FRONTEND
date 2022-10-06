@@ -1,0 +1,138 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    
+}
+html{
+    font-size: 62.5%;
+}
+body{
+    box-sizing: inherit;  
+    background-color: #f8f8ff;
+}
+/* Styling the header section backgound */
+.style{
+    position: relative;
+    /* background: linear-gradient(to right,#717894af 40%, #717c94a8 60%), url(../images/header-bacground.jpg); */
+
+    /* background-repeat: no-repeat;
+    background-size: cover;
+    height: 90vh; */
+    padding: 0 2% 5% 1%;
+    margin-bottom: 0;
+}
+/* styling the  navigations divisions */
+.row_nav{
+    display: grid;
+    grid-template-columns: 10% 90% ;
+    column-gap: .4em;
+    justify-content: center;
+    align-items: center;
+    
+}
+/* Styling logo */
+.logo_style{
+    width: 100%;
+}
+/* styling the listing navigation */
+.nav_column__row{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    
+    justify-content: space-evenly;
+    align-items: center;
+    /* width: 100%; */
+}
+/* Styling the navigation list */
+.style_list{
+    display: block;
+    list-style: none;
+    margin: 0;
+    color: #343434;
+    font-size: 2em;
+    font-weight: 600;
+    font-family: inherit;
+    text-transform: capitalize;
+    text-decoration: none;
+}
+.postion_arrow{
+    display: inline-block;
+    
+}
+/* .style_list:last-child{
+    margin-right: 0;
+} */
+/* style inpire link */
+.inspired{
+    text-align: center;
+    /* background-color: black; */
+}
+.inspire_link{
+    text-decoration: none;
+    text-transform: capitalize;
+    font-family: inherit;
+    font-size: 2.5em;
+    color: #343434;
+    border-bottom: .2em #F7F7F7 solid;
+   
+}
+.inspire_link_text{
+    display:inline-block;
+    margin-bottom:.2em;
+}
+/* header text */
+.header_text{
+    margin-top: 8%;
+    text-align: center;
+}
+.primary_heading{
+    color: #343434;
+    text-transform: capitalize;
+    font-size: 8em;
+    font-weight: 900;
+    font-family: inherit;
+    letter-spacing: .2em;
+}
+/* styling drop menus*/
+.drop_down{
+    display: none;
+}
+.display_drop a{
+    text-decoration: none;
+    color: #343434;
+    display: flex;
+    place-items: center;
+}
+.display_drop:hover ul{
+    display: block;
+    position: absolute;
+    top: 40%;
+    background: #34343423;
+    height: 50vh;
+    padding: 2% 2% 0;
+    z-index: 10;
+}
+.drop_down a{
+    text-decoration: none;
+    color: #343434;
+    font-size: 1em;
+    display: block;
+    text-transform: capitalize;
+    margin-bottom: 2em;
+    transition: all 2s ease-in-out;
+}
+/* login btn */
+ul .btn_login_white{
+    display: inline-block;
+    background: rgb(1, 36, 86);
+    color: #f8f8ff;
+    width: 60%;
+    text-align: center;
+    border-radius: 10em;
+    padding: 2%;
+    font-size: 1.2em;
+    font-weight: 500;
+}

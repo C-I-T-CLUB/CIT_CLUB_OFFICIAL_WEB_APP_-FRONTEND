@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MMU CIT CLUB | New Event</title>
+    <link rel="stylesheet" href="../css/heading.css" media="all">
+    <link rel="stylesheet" href="../css/ourTeam.css">
+    <link rel="stylesheet" href="../css/app.css">
+    <link rel="stylesheet" href="../css/carosel.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/side_navigation.css">
+    <link rel="stylesheet" href="../css/event.css">
+    <link rel="stylesheet" href="../css/newevent.css">
+    <script src="../src/side_nav.js"></script>
+    <!-- Link to google fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <!-- Link to fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/fontawesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/fontawesome.css">
+    <!--meta properties -->
+    <meta name="description" content=" Your site description." />
+    <!--detailed robots meta https://developers.google.com/search/reference/robots_meta_tag -->
+    <meta name="robots" content="index, follow, max-snippet: -1, max-image-preview:large, max-video-preview: -1" />
+    <link rel="canonical" href="" />
+    <!--open graph meta tags for social sites and search engines-->
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="  Opengraph content 25 char are best" />
+    <meta property="og:description" content="  #description." />
+    <meta property="og:url" content="" />
+    <meta property="og:site_name" content="" />
+    <meta property="og:image" content="images//hom-banner-compressed.jpg" />
+    <meta property="og:image:secure_url" content="images//hom-banner-compressed.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="660" />
+    <!--twitter description-->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:description" content="." />
+    <meta name="twitter:title" content="" />
+    <meta name="twitter:site" content="@" />
+    <meta name="twitter:image" content="images/hom-banner-compressed.jpg" />
+    <meta name="twitter:creator" content="@" />
+    <!--opengraph tags for location or address for information panel in google-->
+    <meta name="og:latitude" content="" />
+    <meta name="og:longitude" content="" />
+    <meta name="og:street-address" content="" />
+    <meta name="og:locality" content="" />
+    <meta name="og:region" content="" />
+    <meta name="og:postal-code" content="" />
+    <meta name="og:country-name" content="" />
+    <!--search engine verification-->
+    <meta name="google-site-verification" content="" />
+    <meta name="yandex-verification" content="" />
+    <!--powered by meta-->
+    <meta name="generator" content="" />
+    <!-- Site fevicon icons -->
+    <link rel="icon" href="../logo.jpg" sizes="32x32" />
+    <link rel="icon" href="../logo.jpg" sizes="192x192" />
+    <link rel="apple-touch-icon-precomposed" href="../logo.jpg" />
+    <meta name="msapplication-TileImage" content="images/icon/cropped-cropped-favicon-1-1-270x270.png" />
+    <!--complete list of meta tags at - https://gist.github.com/lancejpollard/1978404 -->
+</head>
+<body>
+    <main class="newevent_main">
+        <section class="newevent_form">
+            <form action="" method="post">
+                <div>
+                    <label class="label_style">Event Title
+                        <input class="event_input__style" type="text" name="eventTitle" maxlength="100" id="event_title" required>
+                    </label>
+                </div>
+                <div>
+                    <label class="label_style">Event Link
+                        <input class="event_input__style" type="url" name="meetUpLink" required>
+                    </label>
+                </div>
+                <div>
+                    <label class="label_style">Event short description
+                        <textarea class="event_input__style textarea_style" name="eventShortDesc" id="" cols="30" rows="10" maxlength="400" required></textarea>
+                    </label>
+                </div>
+                <div>
+                    <label class="label_style">Topic
+                        <input class="event_input__style" type="text" name="topic" id="" required>
+                    </label>
+                </div>
+                <div class="event_thumbnail">
+                    <div class="position_style">
+                        <label class="label_style position_upload-thumbnail">Upload Event Thumbnail
+                            <input type="file" multiple accept="image/*" name="eventThumbnail" id="event_thumbnail" style="display: none;">
+                        </label>
+                    </div>
+                    <div>
+                        <p><img width="200" height="200" id="event_thumbnail_output" class="hide_image_holder"></p>
+                    </div>
+                </div>
+                <div class="schedule_agenda">
+                    <h2 class="heading_secondary style-color">schedule &amp; agenda</h2>
+                    <div class="dates_display">
+                        <div>
+                            <label class="label_style">Event Starts
+                                <input class="event_input__style" type="datetime-local" name="startDate" id="" required>
+                            </label>
+                        </div>
+                        <div>
+                            <label class="label_style">Event Ends
+                                <input class="event_input__style" type="datetime-local" name="endDate" id="" required>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="event_location">
+                    <h2 class="heading_secondary style-color">location</h2>
+                    <div>
+                        <div>
+                            <label class="label_style">Venue Name
+                                <input class="event_input__style" type="text" required`>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="speaker">
+                    <h2 class="heading_secondary style-color">speakers</h2>
+                    <div class="speaker_input">
+                        <input class="event_input__style details" type="text" name="speakerName" id="" placeholder="Create speakers here">
+                    </div>
+
+                </div>
+                <div class="facilitator">
+                    <h2 class="heading_secondary style-color">facilitators</h2>
+                    <div class="facilitator_input">
+                        <input class="event_input__style  details" type="text" name="facilitatorsName" id="" placeholder="Create facilitators here">
+                    </div>
+                </div>
+                <button type="submit" class="publish_event__btn">Publish Event</button>
+            </form>
+        </section>
+    </main>
+    <script src="../src/uploadthumbnail.js" async defer></script>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CIT CLUB | REGISTRATION</title>
+         <!--Boostrap links  -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous"/>
+        <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+         <!--  favicon link -->
+         <link rel="shortcut icon" href="../logo.jpg" type="image/x-icon">
+         <!-- Link to local css files -->
+         <!-- link to google fonts -->
+         <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+    </head>
+    <body class="container">
+        
+        <div class="row" style="margin: 5%;" >
+            <div class="col-2">
+
+            </div>
+            <div class="col-8"> 
+                <div style="color:purple; text-align: center;">
+                    <h1>REGISTER HERE!</h1>
+                </div>
+                <form class="form" method="post">
+                    <div class="form-group">
+                        <label for="fname">Enter Your First Name:*</label>
+                        <input id="fname" name="fname" class="form-control" type="text" minlength="3" maxlength="16" onclick="user_name()" placeholder=" e.g Brenda" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="fname">Enter Your Last Name:*</label>
+                        <input id="lname" name="Lname" class="form-control" type="text" minlength="3" maxlength="16" placeholder="e.g Mwangi" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Enter Your Email:*</label>
+                        <input id="email" name="email" class="form-control" type="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Enter Your Phone No:*</label>
+                        <input id="phone" name="phone" class="form-control" type="number" minlength="10" maxlength="12"  placeholder="0740730156" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="course">Enter Your Course:*</label>
+                        <input id="course" name="course" minlength="3" maxlength="5" class="form-control" type="text" size="5" placeholder="Enter only course abbreviation e.g BIT" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="rating">Rating of Programming:*</label>
+                        <input id="rating" name="rating" class="form-control" type="number" min="1" max="10" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="interest">Field of interest:*</label>
+                        <select id="interest" class="form-control" name="interest" required>
+                            <option value="NONE" selected>--NONE--</option>
+                            <option value="Android">Android Development</option>
+                            <option value="Web">Web Development</option>
+                            <option value="Data Science">Data Science</option>
+                            <option value="Machine Learning">Machine Learning</option>
+                            <option value="Microservices Developement">Microservices Developement</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="extras">Additional Information:</label>
+                        <textarea name="" id="" cols="0" rows="10" class="form-control" placeholder="Enter anyother additional information here"></textarea>
+                    </div>
+                    <button type="submit" id="submit_btn" class="btn btn-primary">REGISTER!</button>
+                </form>
+            </div>
+            <div class="col-2">
+
+            </div>
+        </div>
+
+    </body>
+</html>

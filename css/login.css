@@ -1,0 +1,93 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+.login_main{
+    background-image: linear-gradient(to bottom,rgba(1, 36, 86, 0.5)35%, rgba(1, 36, 86, .9)65%), url(../images/header-bacground.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    position: relative;
+}
+.section_position{
+    background: #f8f8ffa2;
+    width: 30%;
+    height: 70vh;
+    position: absolute;
+    left: 36%;
+    top: 20%;
+    padding: 4em;
+}
+.login_caption{
+    font-size: 2.5em;
+    font-weight: 800;
+    color: #343434;
+    display: block;
+    text-align: center;
+    padding: 1%;
+}
+.input_section{
+    margin-top: 2.5%;
+    /* background-color: blueviolet;  */
+    padding: 2.5%;
+}
+label{
+    font-size: 1.5em;
+    color: #343434;
+    text-transform: capitalize;
+}
+.spacing_section{
+    margin: 2% 0 4% 0;
+}
+.input_box{
+    height: 6vh;
+    width: 100%;
+    padding-left: .3em;
+    color: #f8f8ff;
+    background-color: rgba(1, 36, 86, 0.397);
+    border: none;
+    font-size: 2em;
+}
+.input_box:focus{
+    outline: none;
+}
+/*remember me text*/
+.tranform_me{
+    text-transform: lowercase;
+}
+.chkbox_style{
+    margin: 2% 0 4% 0;
+}
+.link_section{
+    margin-bottom: 4%;
+}
+.forgot_link{
+    text-decoration: none;
+    font-size: 1.8em;
+}
+.signup_link{
+    display: inline-block;
+    margin-left: 5em;
+    text-decoration: none;
+    background-color: #34343467;
+    font-size: 2em;
+    color: #f8f8ff;
+    padding: 1%;
+    border-radius: .2em;
+}
+.btn_section{
+    text-align: center;
+}
+.login_btn{
+    background-color:rgba(1, 36, 86, 0.7) ;
+    font-size: 2.5em;
+    padding: 1.5%;
+    color: #f8f8ff;
+    border: none;
+    width: 100%;
+    text-transform: capitalize;
+}
+.login_btn:focus{
+    border: .1em solid #343434;
+}

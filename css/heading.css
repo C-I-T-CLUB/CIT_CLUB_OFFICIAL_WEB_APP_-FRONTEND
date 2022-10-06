@@ -1,0 +1,104 @@
+/* This css file has alll styles for typography */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+/* styling headings */
+section{
+    padding: 1% 1% 1% 1%;
+}
+.heading_primary{
+    font-size: 5.5em;
+
+}
+.lading_section_style{
+    /* padding:2em 1em 0 1em ; */
+    font-weight: 500;
+    /* margin-bottom: 2em; */
+}
+.heading_secondary {
+    text-transform: capitalize;
+    color: #00008B;
+    text-align: center;
+    font-size: 2em;
+}
+
+.heading_tertiary {
+    font-size: 2.8em;
+    color: #00316E;
+    text-transform: capitalize;
+    margin: 1em 0 .1em 0;
+    font-weight: 800;
+}
+
+
+/* footer contents */
+
+.content_div {
+    margin-bottom: 5%;
+}
+
+
+/* footer span */
+
+.para_content {
+    font-size: 1.8em;
+}
+
+
+/* styling footer links */
+
+.para_content a {
+    text-decoration: none;
+    color: black;
+}
+
+
+/* Adding left margin to the follow us span */
+
+.margin_left {
+    margin-left: 1%;
+}
+
+/* styling span */
+.profile{
+    text-align: start;
+    display: block;
+    text-transform: capitalize;
+    padding: 2% 2% 3% 2%;
+}
+.funfacts{
+    text-align: start;
+    display: block;
+    text-transform: capitalize;
+    padding: 1% 2% 3% 2%;
+}
+.interest{
+    text-align: start;
+    display: block;
+    text-transform: capitalize;
+    padding: 2% 2% 3% 2%;
+}
+.social{
+    display: grid;
+    grid-template-columns: 33.3% 33.3% 33.3%;
+    justify-content: center;
+    align-items: center;
+    padding: 2% 0 2% 15%;
+    background: #00316E; ;
+    color: #F8F8FF;
+}
+.social_link{
+    color: #F8F8FF;
+}
+/* styling the back paragraph */
+.b_para{
+    font-weight: 400;
+    
+}
+.span_heading{
+    color: #00316E;
+}
