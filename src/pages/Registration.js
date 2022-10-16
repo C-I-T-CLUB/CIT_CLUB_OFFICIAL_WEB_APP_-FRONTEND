@@ -87,6 +87,17 @@ function Registration() {
                     />
                 </div>
                 <div className="form-group">
+                    <label htmlFor="designRating">Rating of Programming:*</label>
+                    <input
+                    id="designRating"
+                    name="designRating"
+                    className="form-control"
+                    type="number"
+                    min={1}
+                    max={10}
+                    required=""
+                    />
+                <div className="form-group">
                     <label htmlFor="interest">Field of interest:*</label>
                     <select
                     id="interest"
@@ -109,7 +120,7 @@ function Registration() {
                 <div className="form-group">
                     <label htmlFor="extras">Additional Information:</label>
                     <textarea
-                    name=""
+                    name="other"
                     id=""
                     cols={0}
                     rows={10}
