@@ -7,105 +7,15 @@ import "../assets/css/Footer.css"
 import "../assets/css/Main.css"
 import "../assets/css/SideNavigation.css"
 import arrowDown from '../assets/cit club design/icon/arrow-down-svgrepo-com.svg'
+import Header from '../components/Header'
+import Footer from '../components/Footer'
 
 
 
 function OurTeam() {
   return (
     <>
-        <header className="style">
-            {/* The navigation links */}
-            <nav className="row_nav">
-            <div className="nav_column">
-                <a href="/">
-                {" "}
-                <img
-                    src={require('../assets/img/logo-removebg-preview.png')}
-                    alt="cit club logo"
-                    srcSet={require('../assets/img/logo-removebg-preview.png')}
-                    className="logo_style"
-                />
-                </a>
-            </div>
-            <div className="nav_column nav_column__row">
-                <li className="style_list display_drop">
-                {" "}
-                <a href="#">
-                    resources
-                    <img
-                    className="postion_arrow"
-                    src={arrowDown}
-                    alt=""
-                    />
-                </a>
-                <ul className="drop_down">
-                    <a href="/Resources/PastPapers">past papers</a>
-                    <a href="/Resources/Projects">projects</a>
-                    <a href="/Resources/Blogs">blogs</a>
-                    <a href="/Resources/TechNews">tech news</a>
-                    <a href="/Resources/TechInterviews">tech inverviews</a>
-                </ul>
-                </li>
-                <a href="/Event" className="style_list">
-                events
-                </a>
-                <a href="/Gallary" className="style_list">
-                gallery
-                </a>
-                <a href="/OurTeam" className="style_list">
-                our team
-                </a>
-                <a href="/FindDeveloper" className="style_list">
-                find developer
-                </a>
-                <li href="#" className="style_list display_drop ">
-                <a href="#">
-                    accounts
-                    <img
-                    className="postion_arrow"
-                    src={arrowDown}
-                    alt=""
-                    />
-                </a>
-                <ul className="drop_down">
-                    <a href="/SignUp">sign up</a>
-                    <a href="/Login" className="btn_login_white">
-                    login
-                    </a>
-                    <a href="/Registration">Join CIT CLUB</a>
-                </ul>
-                </li>
-            </div>
-            </nav>
-            {/* side bar navigation */}
-            <div className="side_nav" id="side_bar__nav">
-            <a
-                href="javascript:void(0)"
-                className="side_nav_close"
-                onclick="close_nav()"
-            >
-                ×
-            </a>
-            <a href="/Registration" className="side_nav_btn">
-                register
-            </a>
-            <a href="/Event" className="side_nav_btn">
-                events
-            </a>
-            <a href="#" className="side_nav_btn">
-                support us
-            </a>
-            </div>
-            <span className="open_nav__btn" onclick="open_nav()">
-            ☰
-            </span>
-            {/* inspirations */}
-            <div className="inspired">
-            <a href="#" className="inspire_link">
-                <span className="inspire_link_text">inspiration</span>
-            </a>
-            </div>
-        </header>
+        <Header />
         {/*[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]*/}
@@ -1065,63 +975,7 @@ function OurTeam() {
             </section>
         </main>
         {/* Footer section */}
-        <footer>
-            <div className="part">
-            <img
-                src={require('../assets/img/logo-removebg-preview.png')}
-                alt="cit club logo"
-                srcSet={require('../assets/img/logo-removebg-preview.png')}
-                className="footer_logo"
-            />
-            </div>
-            <div className="part">
-            <h3 className="footer_title">Our Address</h3>
-            <ul>
-                <li>Nairobi, Kenya</li>
-                <li>Multimedia University Of Kenya</li>
-                <li>P.O Box 15653 - 00503</li>
-            </ul>
-            </div>
-            <div className="part">
-            <h3 className="footer_title">Call Us</h3>
-            <ul>
-                <li>
-                <i className="fas fa-phone-alt" /> Paullaster Okoth{" "}
-                </li>
-                <li>
-                <i className="fas fa-phone-alt" /> Stephen Kamau{" "}
-                </li>
-                <li>
-                <i className="fas fa-phone-alt" /> Dan Santiago{" "}
-                </li>
-            </ul>
-            </div>
-            <div className="part">
-            <h3 className="footer_title">Sponsors</h3>
-            <ul>
-                <li>Multimedia University Of Kenya</li>
-                <li>Virdismart Global</li>
-                <li>Meta Ajax Technology Agencies</li>
-            </ul>
-            </div>
-            <div className="part">
-            <h3 className="footer_title">Follow Us</h3>
-            <ul>
-                <li>
-                <i className="fab fa-twitter" /> Twitter
-                </li>
-                <li>
-                <i className="fab fa-github" /> Github
-                </li>
-                <li>
-                <i className="fas fa-envelope" /> Email
-                </li>
-                <li>
-                <i className="fab fa-whatsapp" /> Whatsapp
-                </li>
-            </ul>
-            </div>
-        </footer>
+        <Footer />
     </>
 
   )
