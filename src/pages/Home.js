@@ -8,12 +8,14 @@ import '../assets/css/Main.css';
 import '../assets/css/SideNavigation.css';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import Hero from '../components/Hero';
 
 function Home() {
   return (
     <>
       {/*  This is the header section  */}
       <Header />
+      <Hero/>
       {/* <!-- Main section of the page -->
       <!-- This section will display the blogs that are fetched via an API and refreshed after 24 hours --> */}
       <main className="style_main">
