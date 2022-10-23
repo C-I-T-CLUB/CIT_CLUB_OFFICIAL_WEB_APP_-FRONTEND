@@ -9,26 +9,26 @@
   .modernForm a {
     text-decoration: none;
     margin-left: 10px;
-    color: #3c63cc;
+    color: rgb(1, 36, 86);
     font-weight: 600;
     
   }
   .moderdForm a:hover {
     margin-left: 30px;
-    color: #2fa1fd;
+    color: rgb(1, 36, 86);
     text-decoration: none;
   }
   .modernForm {
     max-width: 1200px;
     display: flex;
     margin: 50px auto;
-    background-color: #fff;
+    background-color: #f8f8ff;
     border-radius: 10px;
   }
   .imageSection {
     flex-basis: 50%;
     position: relative;
-    color: white;
+    color: #f8f8ff;
     background-image: url('https://pbs.twimg.com/media/EIQo7_zX0AAB7UD?format=jpg&name=large');
     background-size: cover;
     background-repeat: no-repeat;
@@ -40,7 +40,7 @@
     position: absolute;
     width: 100%;
     height: 100%;
-    background-color: rgba(96, 30, 150, 0.507); 
+    background-color: rgba(1, 36, 86, 0.507); 
     border-bottom-left-radius: 10px;
     border-top-left-radius: 10px;
     z-index: 0;
@@ -56,7 +56,7 @@
   .textInside,
   .service {
     position: absolute;
-    color: #fff;
+    color: #f8f8ff;
   }
   .textInside {
     bottom: 200px;
@@ -64,18 +64,18 @@
     
   }
   .textInside h1 {
-    color: #fff;
+    color: #f8f8ff;
     font-weight: 900;
   }
   .tagLine {
     font-size: 1.4rem;
     font-weight: 600;
-    color: #fff;
+    color: #f8f8ff;
   }
   .price {
     font-size: 2rem;
     font-weight: 700;
-    color: #fff;
+    color: #f8f8ff;
   }
   .service {
     bottom: 30px;
@@ -83,12 +83,12 @@
   }
   .service p {
     font-weight: 700;
-    color: #fff;
+    color: #f8f8ff;
   }
   .contactForm {
     flex-basis: 45%;
     margin: auto;
-    color: #555;
+    color: #343434;
     padding-left: 30px;
   }
   .contactForm h1 {
@@ -96,7 +96,7 @@
     font-weight: 900;
   }
   input:focus{
-    border: #2fa1fd 1px;
+    border: rgb(1, 36, 86) 1px;
   }
   input[type="email"],
   input[type="text"],
@@ -107,16 +107,12 @@
     width: 100%;
     padding: 10px;
     border-radius: 5px;
-    border: rgb(177, 177, 177) 1px solid; 
+    border: #343434 1px solid; 
     margin-top: 10px;
     font-size: medium;
     color: #000;
   }
- select.input-lg{
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    -o-appearance: none;
- }
+
   .row-form{
     display: flex;
     flex-direction: row;
@@ -136,10 +132,10 @@
   }
   
   .submit {
-    background-color: #3c63cc;
+    background-color: rgb(1, 36, 86);
     font-size: 1.875rem;
     border: none;
-    color: white;
+    color: #f8f8ff;
     font-weight: 700;
     padding: 10px 50px;
     border-radius: 5px;
@@ -149,7 +145,7 @@
     float: left;
   }
   input[type="submit"]:hover {
-    background-color: #2fa1fd;
+    background-color: rgb(1, 36, 86);
   }
   
   @media only screen and (max-width: 768px) {

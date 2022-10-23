@@ -5,32 +5,42 @@ import Footer from '../components/Footer'
 import * as Yup from 'yup';
 import { Formik } from 'formik';
 import { Loader } from '../components/Loader';
-
+import { useLoginMutation } from '../hooks/apis/authapis';
+import Auth from '../hooks/auth'
+import { useNavigate } from 'react-router-dom';
+import { Notification } from '../components/Notification';
 function Login() {
+  const navigate = useNavigate()
+  const auth = Auth
+  const { mutateAsync:loginMutation, isError } = useLoginMutation()
+  React.useEffect(()=>{
+    if (auth.isAuthenticated()){
+      navigate("/")
+    }
+  })
   return (
     <>
     <Header/>
     <Fragment>
-    <div class="modernForm">
-  <div class="imageSection">
-    {/* <div class="image">
-      <div class="overlay"></div>
-      <img src="https://pbs.twimg.com/media/EIQo7_zX0AAB7UD?format=jpg&name=large" alt="cit-learning" />
-    </div> */}
-    <div class="textInside">
+    <div className="modernForm">
+  <div className="imageSection">
+    
+      <div className="overlay"></div>
+      
+    <div className="textInside">
       <h1>Welcome Back</h1>
-      <p class="tagLine">Login</p>
+      <p className="tagLine">Login</p>
     </div>
     
   </div>
-  <div class="contactForm">
+  <div className="contactForm">
     <h1>Login</h1>
     <Fragment>
         <Formik
           initialValues={{
             email: "",
             password: "",
-
+            submit: null
           }}
           validationSchema={Yup.object().shape({
             
@@ -41,6 +51,26 @@ function Login() {
           })}
           onSubmit={(values, { setErrors, setStatus, setSubmitting }) => {
             setSubmitting(true)
+            loginMutation({
+              email: values.email,
+              password: values.password
+            }).then(res=>{
+              if (res){
+                auth.setAuthToken(res?.token)
+                setSubmitting(false)
+                navigate(-1)
+              }else{
+                setSubmitting(false)
+                setErrors({
+                  submit: res?.message ?? "Failed! Error Trying to login"
+                })
+              }
+            }).catch(err=>{
+              setSubmitting(false)
+              setErrors({
+                submit: err?.message ?? "Failed! Error Trying to login"
+              })
+            })
           }}
         >
           {({
@@ -53,9 +83,8 @@ function Login() {
             values,
           }) => (
             <form noValidate onSubmit={handleSubmit}>
-                
-              <div class="name" >
-                <label for="fullName">Email Address:</label>
+              <div className="name" >
+                <label htmlFor="fullName">Email Address:</label>
                 <input
                   type="email"
                   name="email"
@@ -72,8 +101,8 @@ function Login() {
                 )
                }
               </div>
-              <div class="name" >
-                <label for="fullName">Password</label>
+              <div className="name" >
+                <label htmlFor="fullName">Password</label>
                 <input
                   type="password"
                   name="password"
@@ -91,9 +120,9 @@ function Login() {
               </div>
               
               
-              <div class="checkbox">
+              <div className="checkbox">
                 <input type="checkbox" id="checkbox" name="terms" required value={values.terms} onChange={handleChange} onBlur={handleBlur} />
-                <label for="checkbox">
+                <label htmlFor="checkbox">
                   Remember Me
                 </label>
                 {
@@ -102,6 +131,11 @@ function Login() {
                 )
                }
               </div>
+              {
+               ( isError || errors.submit )&& (
+                  <Notification isSuccess={false} style={{marginTop:12}} text={errors.submit}/>
+                )
+              }
               <button type="submit" className="submit" disabled={isSubmitting} >
                 { isSubmitting ?  <Loader/> : 'Login' }
               </button>

@@ -5,27 +5,30 @@ import Header from "../components/Header";
 import '../assets/css/Registration.css';
 import * as Yup from "yup";
 import { Loader } from "../components/Loader";
+import { useNavigate } from "react-router-dom";
+import { Range } from "../components/Range";
+import { useJoinCitMutation } from "../hooks/apis/authapis";
+import { Notification } from "../components/Notification";
 
 function Registration() {
+  const navigate = useNavigate()
+  const {mutateAsync:joinCitMutation,isError} = useJoinCitMutation()
   return (
     <>
       <Header />
-      <div class="modernForm">
-  <div class="imageSection">
-    {/* <div class="image">
-      <div class="overlay"></div>
-      <img src="https://pbs.twimg.com/media/EIQo7_zX0AAB7UD?format=jpg&name=large" alt="cit-learning" />
-    </div> */}
-    <div class="textInside">
+      <div className="modernForm">
+  <div className="imageSection">
+      <div className="overlay"></div>
+    <div className="textInside">
       <h1>Join a Thriving CIT community</h1>
-      <p class="tagLine">Register</p>
+      <p className="tagLine">Learn with great developers the beauty of Programming</p>
     </div>
-    <div class="service">
-      <p><span class="price">Ksh 100</span> / Month</p>
+    <div className="service">
+      <p><span className="price">Ksh 100</span> / Month</p>
     </div>
   </div>
-  <div class="contactForm">
-    <h1>Become A Member Of The CIT club</h1>
+  <div className="contactForm">
+    <h1>Sign Me Up!</h1>
     <Fragment>
         <Formik
           initialValues={{
@@ -34,11 +37,13 @@ function Registration() {
             email: "",
             phone: "",
             course: "",
-            rating: "",
-            designRating: "",
+            rating: 5,
+            designRating: 5,
             interest: "",
             other: "",
-            terms: false
+            terms: false,
+            password:"",
+            sumbit:null
 
           }}
           validationSchema={Yup.object().shape({
@@ -49,19 +54,36 @@ function Registration() {
               .required("Email is Required"),
             phone: Yup.string().required("Please Enter phone number"),
             course: Yup.string().required("Please Enter Course"),
-            // rating: Yup.number()
-            //   .max(10)
-            //   .min(2)
-            //   .required("Programming Rating Required"),
-            // designRating: Yup.number()
-            //   .max(10)
-            //   .min(2)
-            //   .required("Design Rating Required"),
+            rating: Yup.number()
+              .max(10)
+              .min(2)
+              .required("Programming Rating Required"),
+            designRating: Yup.number()
+              .max(10)
+              .min(2)
+              .required("Design Rating Required"),
             other: Yup.string(),
-            terms: Yup.bool().isTrue("Please accept Terms and Condition")
+            terms: Yup.bool().isTrue("Please accept Terms and Condition"),
+            password: Yup.string().matches(/^\S*(?=\S{6,})(?=\S*\d)(?=\S*[A-Z])(?=\S*[a-z])(?=\S*[!@#$%^&*? ])\S*$/,"Weak Password").required("Password Required")
           })}
           onSubmit={(values, { setErrors, setStatus, setSubmitting }) => {
             setSubmitting(true)
+            delete values.terms;
+            delete values.sumbit;
+            joinCitMutation(values).then(res=>{
+              if (res){
+                setSubmitting(false)
+                navigate("/Login")
+              }else {
+                setSubmitting(false)
+                setErrors({
+                  sumbit: 'Failed! Error Trying to Register'
+                })
+              }
+            }).catch(err=>{setSubmitting(false);setErrors({
+              sumbit: err?.message ?? 'Error Trying to Register'
+            })})
+            
           }}
         >
           {({
@@ -75,12 +97,12 @@ function Registration() {
           }) => (
             <form noValidate onSubmit={handleSubmit}>
                 <div className="row-form">
-              <div class="name" >
-                <label for="fullName">First Name:</label>
+              <div className="name" >
+                <label htmlFor="fname">First Name:</label>
                 <input
                   type="text"
                   name="fname"
-                  id="fullName"
+                  id="fname"
                   placeholder="ex: John"
                   value={values.fname}
                   onChange={handleChange}
@@ -93,12 +115,12 @@ function Registration() {
                 )
                }
               </div>
-              <div class="name" >
-                <label for="fullName">Last Name</label>
+              <div className="name" >
+                <label htmlFor="lname">Last Name</label>
                 <input
                   type="text"
                   name="lname"
-                  id="fullName"
+                  id="lname"
                   placeholder="ex: Doe"
                   value={values.lname}
                   onChange={handleChange}
@@ -112,12 +134,12 @@ function Registration() {
                }
               </div>
               </div>
-              <div class="name" >
-                <label for="fullName">Email Address:</label>
+              <div className="name" >
+                <label htmlFor="email">Email Address:</label>
                 <input
                   type="email"
                   name="email"
-                  id="fullName"
+                  id="email"
                   placeholder="ex: johndoe@email.com"
                   value={values.email}
                   onChange={handleChange}
@@ -130,8 +152,8 @@ function Registration() {
                 )
                }
               </div>
-              <div class="name" >
-                <label for="fullName">Phone Number</label>
+              <div className="name" >
+                <label htmlFor="phone">Phone Number</label>
                 <input
                   type="tel"
                   name="phone"
@@ -148,12 +170,12 @@ function Registration() {
                 )
                }
               </div>
-              <div class="name" >
-                <label for="fullName">Course</label>
+              <div className="name" >
+                <label htmlFor="course">Course</label>
                 <input
                   type="text"
                   name="course"
-                  id="fullName"
+                  id="course"
                   placeholder="ex: Bachelor of Science In Computer Science"
                   value={values.course}
                   onChange={handleChange}
@@ -166,11 +188,12 @@ function Registration() {
                 )
                }
               </div>
-              <div class="name" >
-                <label for="fullName">Interest</label>
+              <div className="name" >
+                <label htmlFor="interest">Interest</label>
                 <select
                 value={values.interest}
                 name="interest"
+                id="interest"
                 onChange={handleChange}
                 onBlur={handleBlur}
                 className={touched.interest && errors.interest && ('error-input')}
@@ -185,9 +208,35 @@ function Registration() {
                 )
                }
               </div>
-              <div class="checkbox">
+              <div className="row-form">
+                <div className="name">
+                <Range value={values.rating} name="rating" onBlur={handleBlur} onChange={handleChange} label="Programming Rating"/>
+                </div>
+                <div className="name">
+                <Range value={values.designRating} name="designRating" onBlur={handleBlur} onChange={handleChange} label="Design Rating"/>
+                </div>
+              </div>
+              <div className="name" >
+                <label htmlFor="password">Password</label>
+                <input
+                  type="password"
+                  name="password"
+                  id="password"
+                  placeholder="ex: ******"
+                  value={values.password}
+                  onChange={handleChange}
+                  onBlur={handleBlur}
+                  className={touched.password && errors.password && ('error-input')}
+                />
+               {
+                touched.password && errors.password && (
+                    <p className="form-error">{errors.password}</p>
+                )
+               }
+              </div>
+              <div className="checkbox">
                 <input type="checkbox" id="checkbox" name="terms" required value={values.terms} onChange={handleChange} onBlur={handleBlur} />
-                <label for="checkbox">
+                <label htmlFor="checkbox">
                   By signing up, you agree to the<a href="# ">Term of Service</a>
                 </label>
                 {
@@ -196,6 +245,9 @@ function Registration() {
                 )
                }
               </div>
+              {
+                (isError || errors.sumbit) && (<Notification isSuccess={false} text={errors.sumbit}/>)
+              }
               <button type="submit" className="submit" disabled={isSubmitting} >
                 { isSubmitting ?  <Loader/> : 'Register' }
               </button>

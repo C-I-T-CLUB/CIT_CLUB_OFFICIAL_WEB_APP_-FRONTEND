@@ -43,12 +43,12 @@ function Header() {
           </nav>
           {/* <!-- side bar navigation --> */}
           <div className="side_nav" id="side_bar__nav">
-              <a href="javascript:void(0)" className="side_nav_close" onClick="close_nav()">&times;</a>
+              <a href="#/" className="side_nav_close" >&times;</a>
               <a href="./html/registration.html" className="side_nav_btn">register</a>
               <a href="/Event" className="side_nav_btn">events</a>
-              <a href="#" className="side_nav_btn">support us</a>
+              <a href="#/" className="side_nav_btn">support us</a>
           </div>
-              <span className="open_nav__btn" onClick="open_nav()">&#9776;</span>
+              <span className="open_nav__btn" >&#9776;</span>
           
           {/* <!-- inspirations --> */}
           
