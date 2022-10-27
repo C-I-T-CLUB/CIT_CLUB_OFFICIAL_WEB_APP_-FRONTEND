@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 import arrowDown from '../assets/cit club design/icon/arrow-down-svgrepo-com.svg';
 import '../assets/css/Heading.css';
 import '../assets/css/SideNavigation.css';
@@ -6,12 +7,14 @@ import '../assets/css/SideNavigation.css';
 function Header() {
   return (
     <>
-        <header className="style">
+        <header className="header">
           {/* <!-- The navigation links --> */}
           <nav className="row_nav">
+            <Link to="/">
               <div className="nav_column">
                 <img src={require('../assets/img/logo-removebg-preview.png')} alt="cit club logo" className="logo_style" />
               </div>
+              </Link>
               <div className="nav_column nav_column__row">
                   <li className="style_list display_drop"> <a href="#">resources
                       <img  className="postion_arrow" src={arrowDown} alt="" />
@@ -40,25 +43,15 @@ function Header() {
           </nav>
           {/* <!-- side bar navigation --> */}
           <div className="side_nav" id="side_bar__nav">
-              <a href="javascript:void(0)" className="side_nav_close" onclick="close_nav()">&times;</a>
+              <a href="#/" className="side_nav_close" >&times;</a>
               <a href="./html/registration.html" className="side_nav_btn">register</a>
               <a href="/Event" className="side_nav_btn">events</a>
-              <a href="#" className="side_nav_btn">support us</a>
+              <a href="#/" className="side_nav_btn">support us</a>
           </div>
-              <span className="open_nav__btn" onclick="open_nav()">&#9776;</span>
+              <span className="open_nav__btn" >&#9776;</span>
           
           {/* <!-- inspirations --> */}
-          <div className="inspired">
-              <a href="#" className="inspire_link"><span className="inspire_link_text">inspiration</span></a>
-          </div>
-          <div className="header_text">
-              <div className="header_text_para">
-                  <h1 className="primary_heading">started by students</h1>
-              </div>
-              <div className="header_text_para">
-                  <h1 className="primary_heading">run by students</h1>
-              </div>
-          </div> 
+          
       </header>
     </>
   )

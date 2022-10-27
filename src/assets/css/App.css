@@ -13,21 +13,20 @@ body{
   background-color: #f8f8ff;
 }
 /* Styling the header section backgound */
-.style{
+.header{
   position: relative;
-  /* background: linear-gradient(to right,#717894af 40%, #717c94a8 60%), url(../images/header-bacground.jpg); */
-
-  /* background-repeat: no-repeat;
+  /* background: linear-gradient(to right,#717894af 40%, #717c94a8 60%), url(../images/header-bacground.jpg); */ /* background-repeat: no-repeat;
   background-size: cover;
   height: 90vh; */
-  padding: 0 2% 5% 1%;
+  padding: 0px 0px 0px 0px;
   margin-bottom: 0;
+  height: 10vh;
 }
 /* styling the  navigations divisions */
 .row_nav{
   display: grid;
-  grid-template-columns: 10% 90% ;
-  column-gap: .4em;
+  grid-template-columns: 10vh 90% ;
+  column-gap: .2em;
   justify-content: center;
   align-items: center;
   

@@ -1,70 +1,152 @@
-import React from 'react'
-import "../assets/css/OurTeam.css"
-import "../assets/css/Heading.css"
-import "../assets/css/App.css"
-import "../assets/css/Carosel.css"
-import "../assets/css/Footer.css"
-import "../assets/css/Main.css"
-import "../assets/css/SideNavigation.css"
-import "../assets/css/Login.css"
-
+import React, { Fragment } from 'react'
+import "../assets/css/Registration.css"
+import Header from '../components/Header'
+import Footer from '../components/Footer'
+import * as Yup from 'yup';
+import { Formik } from 'formik';
+import { Loader } from '../components/Loader';
+import { useLoginMutation } from '../hooks/apis/authapis';
+import Auth from '../hooks/auth'
+import { useNavigate } from 'react-router-dom';
+import { Notification } from '../components/Notification';
 function Login() {
+  const navigate = useNavigate()
+  const auth = Auth
+  const { mutateAsync:loginMutation, isError } = useLoginMutation()
+  React.useEffect(()=>{
+    if (auth.isAuthenticated()){
+      navigate("/")
+    }
+  })
   return (
     <>
-        <main className="login_main">
-            <section className="section_position">
-            <form>
-                <span className="login_caption">Login</span>
-                <div className="input_section">
-                <div className="spacing_section">
-                    <label htmlFor="usrname"> Username</label>
-                    <input
-                    className="input_box"
-                    type="text"
-                    name="username"
-                    id="usrname"
-                    maxLength={12}
-                    placeholder="Username"
-                    required=""
-                    />
-                </div>
-                <div className="spacing_section">
-                    <label htmlFor="psword"> password</label>
-                    <input
-                    className="input_box"
-                    type="password"
-                    name="password"
-                    id="psword"
-                    minLength={8}
-                    maxLength={50}
-                    placeholder="password"
-                    required=""
-                    />
-                </div>
-                <div>
-                    <input className="chkbox_style " type="checkbox" name="checkbox" />
-                    <label>
-                    Remember <span className="tranform_me">me</span>
-                    </label>
-                </div>
-                <div className="link_section">
-                    <a href="#" className="forgot_link">
-                    forgot password?{" "}
-                    </a>
-                    <a href="/SignUp" className="signup_link">
-                    sign up
-                    </a>
-                </div>
-                <div className="btn_section">
-                    <button className="login_btn"> login</button>
-                </div>
-                </div>
+    <Header/>
+    <Fragment>
+    <div className="modernForm">
+  <div className="imageSection">
+    
+      <div className="overlay"></div>
+      
+    <div className="textInside">
+      <h1>Welcome Back</h1>
+      <p className="tagLine">Login</p>
+    </div>
+    
+  </div>
+  <div className="contactForm">
+    <h1>Login</h1>
+    <Fragment>
+        <Formik
+          initialValues={{
+            email: "",
+            password: "",
+            submit: null
+          }}
+          validationSchema={Yup.object().shape({
+            
+            email: Yup.string()
+              .email("Invalid Email Provided")
+              .required("Email is Required"),
+            password: Yup.string().required("Password Required").min(6)
+          })}
+          onSubmit={(values, { setErrors, setStatus, setSubmitting }) => {
+            setSubmitting(true)
+            loginMutation({
+              email: values.email,
+              password: values.password
+            }).then(res=>{
+              if (res){
+                auth.setAuthToken(res?.token)
+                setSubmitting(false)
+                navigate(-1)
+              }else{
+                setSubmitting(false)
+                setErrors({
+                  submit: res?.message ?? "Failed! Error Trying to login"
+                })
+              }
+            }).catch(err=>{
+              setSubmitting(false)
+              setErrors({
+                submit: err?.message ?? "Failed! Error Trying to login"
+              })
+            })
+          }}
+        >
+          {({
+            errors,
+            handleBlur,
+            handleChange,
+            handleSubmit,
+            isSubmitting,
+            touched,
+            values,
+          }) => (
+            <form noValidate onSubmit={handleSubmit}>
+              <div className="name" >
+                <label htmlFor="fullName">Email Address:</label>
+                <input
+                  type="email"
+                  name="email"
+                  id="fullName"
+                  placeholder="ex: johndoe@email.com"
+                  value={values.email}
+                  onChange={handleChange}
+                  onBlur={handleBlur}
+                  className={touched.email && errors.email && ('error-input')}
+                />
+               {
+                touched.email && errors.email && (
+                    <p className="form-error">{errors.email}</p>
+                )
+               }
+              </div>
+              <div className="name" >
+                <label htmlFor="fullName">Password</label>
+                <input
+                  type="password"
+                  name="password"
+                  id="fullName"
+                  value={values.password}
+                  onChange={handleChange}
+                  onBlur={handleBlur}
+                  className={touched.password && errors.password && ('error-input')}
+                />
+               {
+                touched.password && errors.password && (
+                    <p className="form-error">{errors.password}</p>
+                )
+               }
+              </div>
+              
+              
+              <div className="checkbox">
+                <input type="checkbox" id="checkbox" name="terms" required value={values.terms} onChange={handleChange} onBlur={handleBlur} />
+                <label htmlFor="checkbox">
+                  Remember Me
+                </label>
+                {
+                touched.terms && errors.terms && (
+                    <p className="form-error">{errors.terms}</p>
+                )
+               }
+              </div>
+              {
+               ( isError || errors.submit )&& (
+                  <Notification isSuccess={false} style={{marginTop:12}} text={errors.submit}/>
+                )
+              }
+              <button type="submit" className="submit" disabled={isSubmitting} >
+                { isSubmitting ?  <Loader/> : 'Login' }
+              </button>
             </form>
-            </section>
-        </main>
-        {/*[if lt IE 7]>
-            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
-        <![endif]*/}
+          )}
+        </Formik>
+      </Fragment>
+  </div>
+</div>
+    </Fragment>
+    <Footer/>
     </>
 
   )

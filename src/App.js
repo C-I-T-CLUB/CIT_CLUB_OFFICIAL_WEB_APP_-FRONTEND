@@ -14,10 +14,14 @@ import Resources from "./pages/Resources";
 import TechNews from "./pages/TechNews";
 import Projects from "./pages/Projects";
 import TechInterviews from "./pages/TechInterviews";
-
-
-
+import  Axios  from 'axios';
+import Auth from './hooks/auth'
+import { ProtectedRoute } from "./components/ProtectedRouteWrapper";
 function App() {
+  const auth = Auth
+  Axios.defaults.headers = {
+    Authorization: `Bearer ${auth.getToken()}`
+  }
   return (
     <>
         <Routes>
@@ -29,11 +33,11 @@ function App() {
             <Route path="/OurTeam" element={<OurTeam />} />
             <Route path="/Registration" element={<Registration />} />
             <Route path="/SignUp" element={<SignUp />} />
-            <Route path="/Resources" element={<Resources />} />
+            <Route path="/Resources" element={ <Resources />} />
             <Route path="/Resources/Blogs" element={<Blogs />} />
             <Route path="/Resources/Projects" element={<Projects />} />
             <Route path="/Gallary" element={<Gallary />} />
-            <Route path="/Resources/PastPapers" element={<PastPapers />} />
+            <Route path="/Resources/PastPapers" element={<ProtectedRoute children={ <PastPapers />} /> } />
             <Route path="/Resources/TechNews" element={<TechNews />} />
             <Route path="/Resources/TechInterviews" element={<TechInterviews />} />
             <Route path="/FindDeveloper" element={<FindDeveloper />} />
