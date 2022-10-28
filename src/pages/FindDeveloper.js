@@ -52,11 +52,12 @@ function FindDeveloper() {
                   vertical: 'top',
                   horizontal: 'left',
                 }}
+                PaperProps={{sx: {width: '200px',color:'red'}}}
                 style={{ marginTop: "20px" }}
               >
-                <MenuItem onClick={handleClose}>Profile</MenuItem>
-                <MenuItem onClick={handleClose}>My account</MenuItem>
-                <MenuItem onClick={handleClose}>Logout</MenuItem>
+                <MenuItem onClick={handleClose} style={{fontSize:20}}>Profile</MenuItem>
+                <MenuItem onClick={handleClose} style={{fontSize:20}}>My account</MenuItem>
+                <MenuItem onClick={handleClose} style={{fontSize:20}}>Logout</MenuItem>
               </Menu>
             </div>  
             
@@ -66,15 +67,24 @@ function FindDeveloper() {
               <div className="underline">
                 <h1>Find Developer</h1>
               </div>
-              <div className="search__container">
-                <form class="form-inline">
-                  <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" />
-                  <SearchIcon style={{position:'absolute', right:'20px', fontSize:'30px'}} />
-                </form>
+              <div class="input-group">
+                <div class="form-outline" style={{width:'60%'}}>
+                  <input type="search" id="form1" class="form-control" />
+                  <label class="form-label" for="form1">Search</label>
+                </div>
+                <button type="button" class="btn btn-primary">
+                  <i class="fas fa-search"></i>
+                </button>
               </div>
             </div>  
           </div>
-          <div className="col-md-12 mt" style={{display:'flex',width:'100%'}}> 
+          <div className="col-md-12 mt grid" > 
+            <DeveloperProfile /> 
+            <DeveloperProfile />
+            <DeveloperProfile /> 
+            <DeveloperProfile />
+            <DeveloperProfile /> 
+            <DeveloperProfile />
             <DeveloperProfile /> 
             <DeveloperProfile />
           </div>

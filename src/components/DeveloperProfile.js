@@ -8,13 +8,14 @@ function DeveloperProfile() {
         <div className="card-body">
             <div className="row">
                 <div className="col-md-4 socials">
-                    <img src="https://via.placeholder.com/150" alt="profile" className="img-fluid" />
+                    <img src="https://picsum.photos/300/300?random=7" alt="profile" className="img-fluid" />
                     <div className="social-icons">
                         <a href="https://www.twitter.com/" target="_blank" rel="noreferrer"><i className="fab fa-twitter"></i></a>
+                        <a href="https://www.github.com/" target="_blank" rel="noreferrer"><i className="fab fa-github"></i></a>
                         <a href="https://www.linkedin.com/" target="_blank" rel="noreferrer"><i className="fab fa-linkedin-in"></i></a>
                     </div>
                 </div>
-                <div className="col-md-8">
+                <div className="col-md-8 details">
                     <h3>John Doe</h3>
                     <span>Python</span>
                     <p style={{fontWeight:'bold'}}>Basic Information</p>
