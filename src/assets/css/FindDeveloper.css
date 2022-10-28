@@ -11,6 +11,9 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
   }
+  .btn-primary{
+    background-color: rgb(1, 36, 86);
+  }
 .header-menu{
     padding: 0px 0px 0px 0px;
     margin-bottom: 0;
