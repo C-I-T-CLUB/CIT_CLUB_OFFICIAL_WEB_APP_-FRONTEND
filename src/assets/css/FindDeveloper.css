@@ -157,6 +157,12 @@
         width: 100%;
         align-items: center;
     }
+    .underline{
+        margin-bottom: 20px;
+    }
+    .underline h1{
+        font-size: xx-large;
+    }
     .socials{
         width: 100%;
         align-items: center;
