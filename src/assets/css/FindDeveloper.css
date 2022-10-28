@@ -1,0 +1,19 @@
+/* Styling logo */
+.logo_style{
+    width: 100%;
+  }
+  .nav_logo{
+    width: 8%;
+  }
+.header-menu{
+    padding: 0px 0px 0px 0px;
+    margin-bottom: 0;
+    height: 10vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.mt{
+    margin-top: 50px;
+}
