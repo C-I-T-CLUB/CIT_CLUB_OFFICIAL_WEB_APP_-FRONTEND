@@ -18,7 +18,7 @@ function FindDeveloper() {
   };
   return (
     <>
-      <div className="container">
+      <div className="container" style={{overflowX:'hidden'}}>
         <div className="row">
           {/* header menu */}
           <div className="header-menu">
