@@ -1,10 +1,11 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import Button from '@mui/material/Button';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import MenuIcon from '@mui/icons-material/Menu';
+import SearchIcon from '@mui/icons-material/Search';
 import "../assets/css/FindDeveloper.css"
+import DeveloperProfile from '../components/DeveloperProfile';
 
 function FindDeveloper() {
   const [anchorEl, setAnchorEl] = React.useState(null);
@@ -61,7 +62,21 @@ function FindDeveloper() {
             
           </div>
           <div className="col-md-12 mt">
-            <h1>Find Developer</h1>
+            <div className="search">
+              <div className="underline">
+                <h1>Find Developer</h1>
+              </div>
+              <div className="search__container">
+                <form class="form-inline">
+                  <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" />
+                  <SearchIcon style={{position:'absolute', right:'20px', fontSize:'30px'}} />
+                </form>
+              </div>
+            </div>  
+          </div>
+          <div className="col-md-12 mt" style={{display:'flex',width:'100%'}}> 
+            <DeveloperProfile /> 
+            <DeveloperProfile />
           </div>
         </div>
       </div>  
