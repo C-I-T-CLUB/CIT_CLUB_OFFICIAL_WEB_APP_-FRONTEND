@@ -17,7 +17,7 @@ function FindDeveloper() {
     setAnchorEl(null);
   };
   return (
-    <>
+    <div className='root'>
       <div className="container" style={{overflowX:'hidden'}}>
         <div className="row">
           {/* header menu */}
@@ -90,7 +90,7 @@ function FindDeveloper() {
           </div>
         </div>
       </div>  
-    </>
+    </div>
   )
 }
 

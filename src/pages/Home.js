@@ -95,7 +95,7 @@ function Home() {
                   </aside>
               </aside>
 
-              <a href="/Resouces/Projects" className="more_projects_btn">
+              <a href="/Resources/Projects" className="more_projects_btn">
                 <span> 
                     More Projects 
                   <img src={arrowDown} alt="next" className="twist_icon" />
