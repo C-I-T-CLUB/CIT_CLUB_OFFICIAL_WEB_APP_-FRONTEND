@@ -13,13 +13,12 @@
   
   .container{
     flex-grow: 1;
-    padding: 2em;
     background-image: whitesmoke;
     background-size: cover;
     background-position: center;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     text-align: center;
   }
   .title{
@@ -49,6 +48,7 @@
   
   .sidebar{
     width: 280px;
+    display: flex;
     flex-shrink: 0;
     background-color: whitesmoke;
     height: 100%;
@@ -112,3 +112,154 @@
     margin-right: 10px;
     cursor: pointer;
   }
+  .leading{
+    display: flex;
+    align-items: center;
+  }
+  .leading img{
+    cursor: pointer;
+    width: 35px;
+    margin-right: 30%;
+  }
+  .leading h3{
+    font-size: 1.5em;
+    font-weight: bold;
+  }
+  .courses{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    row-gap: 20px;
+  }
+  .course{
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    height: 70px;
+    margin: 20px;
+    border: 2px solid #C4C4C4;
+    border-radius: 5px;
+  }
+.course img{
+  margin-right: 20px;
+  align-self: center;
+}
+.course h3{
+  font-size: 1.2em;
+  font-weight: normal;
+}
+.course:hover{
+  background-color: #C4C4C4;
+}
+.toggle{
+  width: 10px;
+  height: 100px;
+  display: none;
+}
+.toggle img{
+  width: 15px;
+  cursor: pointer;
+  transform: rotate(-90deg);
+  align-self: center;
+}
+.toggle button{
+  width:100%;
+  height: 100%;
+  background-color: #C4C4C4;
+}
+@media screen and (max-width: 768px){
+  .main{
+    position: relative;
+    overflow-x: hidden;
+  }
+  .toggle{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 35%;
+    right: 20px;
+  }
+  .toggle-r{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 10px;
+    height: 100px;
+    margin-top: 3%;
+    position: absolute;
+    right: 12px;
+  }
+  .toggle-r img{
+    width: 15px;
+    cursor: pointer;
+    transform: rotate(90deg);
+    align-self: center;
+    margin-right: 4.5px;
+  }
+  .toggle-r button{
+    width:100%;
+    height: 100%;
+    background-color: #f7f1f1;
+  }
+  .container{
+    height: 100%;
+    overflow-x: hidden;
+    position: relative;
+  }
+  .sidebar{
+    position: absolute ;
+    background-color: transparent;
+    left: -280px;
+    top: 2%;
+    width: 60%;
+    z-index: 999;
+    height: auto;
+    overflow-x: hidden;
+  }
+  .sidenar{
+    position: absolute ;
+    background-color: #f7f1f1;
+    left: 0px;
+    top: 2%;
+    width: 60%;
+    z-index: 999;
+    height: auto;
+    overflow-x: hidden;
+    display: flex;
+    align-items: center;
+  }
+  
+  .sidebar-title img{
+    width: 25px;
+  }
+  .leading{
+    margin: 1em 0;
+  }
+  .leading img{
+    width: 25px;
+    margin-right: 20px;
+  }
+  .leading h3{
+    font-size: 1.2em;
+  }
+  .courses{
+    justify-content: center;
+  }
+  .course{
+    width: 250px;
+    height: 60px;
+    margin: 10px;
+  }
+  .course img{
+    width: 30px;
+    margin-right: 10px;
+  }
+  .course h3{
+    font-size: 1em;
+  }
+}
