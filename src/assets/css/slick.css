@@ -1,6 +1,6 @@
 /* Slider */
 .slick-slider img {
-    width: 90%;
+    width: 90%;height:200px;
     margin-left: 10px;
     border: 1px solid whitesmoke;
     border-radius: 5px;
@@ -8,9 +8,10 @@
 
 .slick-container{
     width: 100%;
-    margin-top: 20px;
+    margin-top: 50px;
     padding: 5px;
 }
+
 
 .slck-slide > div{
     margin: 0 30px;

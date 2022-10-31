@@ -189,8 +189,8 @@
 }
 
 @media screen and (max-width:500px) {
-    .slick-next,.slick-prev{
-        background: none;
+    .slick-next:before,.slick-prev:before{
+        color:white;
     }
     .slick-dots{
         bottom: -25px;
