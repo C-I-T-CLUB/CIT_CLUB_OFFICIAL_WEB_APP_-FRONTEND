@@ -1,0 +1,62 @@
+/* 
+This file has the styles for the side bar navigation
+*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+body{
+    box-sizing: inherit;
+}
+/* styling the side nav class */
+.side_nav{
+    height: 35vh;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 10%;
+    right: 2%;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.2) 50% ,rgba(0, 0, 0, 0.2) 50%);
+    overflow-x: hidden;
+    transition: all 0.5s ease-in-out;
+    padding-top: 2em;
+}
+/* side nav links */
+.side_nav_btn{
+    padding: .9em .2em .1em .3em;
+    text-decoration: none;
+    text-transform: capitalize;
+    font-size: 2.3em;
+    color: #F7F7F7;
+    display: block;
+    transition: all .3s ease-in-out;
+}
+/* hover effect on side bar navigations */
+.side_nav_btn:hover{
+    color: skyblue;
+    text-align: inherit;
+}
+/* button to close side bar */
+.side_nav_close{
+    position: absolute;
+    top: 0;
+    right: 2%;
+    font-size: 8em;
+    text-decoration: none;
+    color: white;
+    margin-left: 1.4em;
+    margin-top: -.5em;
+    background: black;
+    height: 12.8vh;
+}
+/* styling the span for opening the side nav bar */
+.open_nav__btn{
+    font-size: 3.5em;
+    cursor: pointer;
+    color:#F7F7F7;
+    position: absolute;
+    top: 8%;
+    right: 2%;
+}

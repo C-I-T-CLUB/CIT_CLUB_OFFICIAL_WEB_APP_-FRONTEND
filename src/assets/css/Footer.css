@@ -1,0 +1,87 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    /* color: rgb(255, 255, 255); */
+
+}
+body{
+    box-sizing: inherit;
+}
+footer{
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    /* background-color: rgb(1, 36, 86); */
+    background: url("../icons/wave\ darkBlue\ svg.svg") no-repeat;
+    background-size: cover;
+    background-position: center;
+    /* min-height: 50vh; */
+    padding: 4em 1em;
+    margin-top: 2rem;
+    display: flex;
+    flex-wrap:wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    /* clip-path: path("M0,160L60,149.3C120,139,240,117,360,101.3C480,85,600,75,720,96C840,117,960,171,1080,186.7C1200,203,1320,181,1380,170.7L1440,160L1440,320L1380,320C1320,320,1200,320,180,320C960,320,840,320,720,320C600,320,480,320,160,320C240,320,120,320,60,320L0,320Z"); */
+}
+/* Style the main footer row */
+.footer_row{
+    display: grid;
+    grid-template-columns: 10% 27.5% 20% 27.5% 15%;
+    column-gap:.5em;
+}
+/* styling footer logo */
+.footer_logo{
+    width: 200px;
+    height: 200px;
+}
+/* styling the copyright bar */
+.copyright_row{
+    display: grid;
+    grid-template-rows: auto;
+    justify-content: center;
+    align-items: center;
+    border-top:.2em #FFDEAD solid;
+}
+/* copyright text */
+.copyright{
+    text-transform: capitalize;
+    font-size: 1.5em;
+}
+/* Adding bottom border to the footer headings */
+.bottom_border{
+    border-bottom: .1em rgba(0, 0, 0, 0.13) solid;
+    width: 51.5%;
+}
+/* Centering footer headings */
+.centering_footer__heading{
+    text-align: center;
+}
+.heading_text_color{
+    color: black;
+}
+
+.part{
+    /* min-width: 220px; */
+    color: rgb(255, 255, 255);
+    margin:15px;
+}
+.part ul{
+line-height: 1.8;
+}
+.part ul li{
+    list-style-type: none;
+    color: rgb(255, 255, 255);
+
+}
+.footer_title{
+    color: rgb(255, 255, 255);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    text-decoration-color: #acabab;
+    margin-bottom: 1rem;
+}
+.fas .fab{
+    color:#fff;
+}

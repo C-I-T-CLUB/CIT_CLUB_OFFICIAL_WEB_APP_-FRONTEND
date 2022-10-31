@@ -1,0 +1,34 @@
+/* Slider */
+.slick-slider img {
+    width: 90%;
+    margin-left: 10px;
+    border: 1px solid whitesmoke;
+    border-radius: 5px;
+}
+
+.slick-container{
+    width: 100%;
+    margin-top: 20px;
+    padding: 5px;
+}
+
+.slck-slide > div{
+    margin: 0 30px;
+}
+
+.slick-list {
+    margin: 0 -10px;
+}
+
+.slick-slider{
+    justify-content: space-between;
+    align-items: center;
+}
+
+@media screen and (min-width:800px){
+    .slick-container{
+        margin: 50px 50px;
+        width: 90%;
+    }
+    
+}
