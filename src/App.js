@@ -19,7 +19,7 @@ import TechInterviews from "./pages/TechInterviews";
 
 function App() {
   return (
-    <div className = "app-container">
+    <>
         <Routes>
             <Route path="/" element={<Home />} />
             <Route path="*" element={<h1>404 Not Found</h1>} />
@@ -38,7 +38,7 @@ function App() {
             <Route path="/Resources/TechInterviews" element={<TechInterviews />} />
             <Route path="/FindDeveloper" element={<FindDeveloper />} />
         </Routes>
-    </div>
+    </>
   );
 }
 
