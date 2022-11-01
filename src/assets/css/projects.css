@@ -3,20 +3,27 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    margin-left: 10px;
+    /* margin-left: 10px; */
     flex-wrap: wrap;
+    padding:0 .8% 0;
 }
 .cards{
+    flex: 1 0 25%;
     margin-left: 10px;
     margin-top: 10px;
     border-radius: 10px;
     padding:10px;
 }
+.cards-img-bt-space{
+margin-bottom: 4%;
+}
 
-.cards h1{
+
+
+/* .cards h1{
 
 }
 .cards p{
 
-}
+} */
 
