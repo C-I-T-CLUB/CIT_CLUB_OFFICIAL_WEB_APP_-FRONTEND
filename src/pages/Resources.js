@@ -1,9 +1,21 @@
-import React from 'react'
+import * as React from 'react';
+import '../assets/css/Resources.css';
+import Header from '../components/Header';
+import Sidebar from '../components/Sidebar'
 
-function Resources() {
+
+export default function Resources() {
   return (
-    <div>Resources</div>
-  )
+    <>
+      <Header />
+      <div className="main">
+        <Sidebar />
+        <div className="container">
+          <h1 className="title">Resources</h1>
+          <p className="info">in progress...</p>
+          <button className="btn">Explore now</button>
+        </div>
+      </div>
+    </>
+  );
 }
-
-export default Resources
