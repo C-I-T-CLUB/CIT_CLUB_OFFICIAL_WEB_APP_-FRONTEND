@@ -6,7 +6,7 @@ function Footer() {
     <>
         <footer>
           <div className="part">
-              <img src={require('../assets/img/logo-removebg-preview.png')} alt="cit club logo" srcset={require('../assets/img/logo-removebg-preview.png')} className="footer_logo" />
+              <img src={require('../assets/img/logo-removebg-preview.png')} alt="cit club logo" srcSet={require('../assets/img/logo-removebg-preview.png')} className="footer_logo" />
           </div>
           <div className="part">
               <h3 className="footer_title">

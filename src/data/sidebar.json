@@ -1,0 +1,154 @@
+
+[
+    {
+        "title": "CIT",
+        "icon": "Laptop",
+        "childrens": [
+            {
+                "title": "Computer Science",
+                "icon": "bi-house-fill",
+                "path": "/"
+            },
+            {
+                "title": "Software Engineering",
+                "icon": "bi-info-circle-fill",
+                "path": "/about"
+            },
+            {
+                "title": "Information Technology",
+                "icon": "bi-phone-fill"
+                
+            },
+            {
+                "title": "Computer Technology",
+                "icon": "bi-question-circle-fill"
+            }
+        ]
+    },
+    {
+        "title": "FAMECO",
+        "icon": "Fameco",
+        "childrens": [
+            {
+                "title": "Computer Science",
+                "icon": "bi-house-fill",
+                "path": "/"
+            },
+            {
+                "title": "Software Engineering",
+                "icon": "bi-info-circle-fill",
+                "path": "/about"
+            },
+            {
+                "title": "Information Technology",
+                "icon": "bi-phone-fill"
+                
+            },
+            {
+                "title": "Computer Technology",
+                "icon": "bi-question-circle-fill"
+            }
+        ]
+    },
+    {
+        "title": "ENGINEERING",
+        "icon": "Engeneering",
+        "childrens": [
+            {
+                "title": "Computer Science",
+                "icon": "bi-house-fill",
+                "path": "/"
+            },
+            {
+                "title": "Software Engineering",
+                "icon": "bi-info-circle-fill",
+                "path": "/about"
+            },
+            {
+                "title": "Information Technology",
+                "icon": "bi-phone-fill"
+                
+            },
+            {
+                "title": "Computer Technology",
+                "icon": "bi-question-circle-fill"
+            }
+        ]
+    },
+    {
+        "title": "FoSAT",
+        "icon": "Fosat",
+        "childrens": [
+            {
+                "title": "Computer Science",
+                "icon": "bi-house-fill",
+                "path": "/"
+            },
+            {
+                "title": "Software Engineering",
+                "icon": "bi-info-circle-fill",
+                "path": "/about"
+            },
+            {
+                "title": "Information Technology",
+                "icon": "bi-phone-fill"
+                
+            },
+            {
+                "title": "Computer Technology",
+                "icon": "bi-question-circle-fill"
+            }
+        ]
+    },
+    {
+        "title": "FoBe",
+        "icon": "Fobe",
+        "childrens": [
+            {
+                "title": "Computer Science",
+                "icon": "bi-house-fill",
+                "path": "/"
+            },
+            {
+                "title": "Software Engineering",
+                "icon": "bi-info-circle-fill",
+                "path": "/about"
+            },
+            {
+                "title": "Information Technology",
+                "icon": "bi-phone-fill"
+                
+            },
+            {
+                "title": "Computer Technology",
+                "icon": "bi-question-circle-fill"
+            }
+        ]
+    },
+    {
+        "title": "Social Sciences", 
+        "icon": "Social",
+        "childrens": [
+            {
+                "title": "Computer Science",
+                "icon": "bi-house-fill",
+                "path": "/"
+            },
+            {
+                "title": "Software Engineering",
+                "icon": "bi-info-circle-fill",
+                "path": "/about"
+            },
+            {
+                "title": "Information Technology",
+                "icon": "bi-phone-fill"
+                
+            },
+            {
+                "title": "Computer Technology",
+                "icon": "bi-question-circle-fill"
+            }
+        ]
+    }
+
+]
