@@ -1,0 +1,22 @@
+.cardContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10px;
+    flex-wrap: wrap;
+}
+.cards{
+    margin-left: 10px;
+    margin-top: 10px;
+    border-radius: 10px;
+    padding:10px;
+}
+
+.cards h1{
+
+}
+.cards p{
+
+}
+
