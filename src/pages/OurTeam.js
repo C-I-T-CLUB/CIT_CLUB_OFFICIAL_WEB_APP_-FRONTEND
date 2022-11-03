@@ -6,8 +6,6 @@ import "../assets/css/Carosel.css"
 import "../assets/css/Footer.css"
 import "../assets/css/Main.css"
 import "../assets/css/SideNavigation.css"
-import arrowDown from '../assets/cit club design/icon/arrow-down-svgrepo-com.svg'
-import Header from '../components/Header'
 import Footer from '../components/Footer'
 
 
@@ -15,7 +13,6 @@ import Footer from '../components/Footer'
 function OurTeam() {
   return (
     <>
-        <Header />
         {/*[if lt IE 7]>
             <p className="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]*/}
@@ -975,7 +972,6 @@ function OurTeam() {
             </section>
         </main>
         {/* Footer section */}
-        <Footer />
     </>
 
   )

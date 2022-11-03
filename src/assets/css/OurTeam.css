@@ -77,3 +77,27 @@
 Written by 
 Brenda and Paullaster 
 */
+@media screen and (max-width: 768px){
+    .team_grid{
+        grid-template-columns: 100%;
+        margin-bottom: 20em;
+        margin-left: 15%;
+    }
+    .team_card{
+        margin-bottom: 12em;
+    }
+    .profile_photo{
+        width: 20.8em;
+        height: 20.8em;
+    }
+    .description{
+        font-size: 1.8em;
+        text-align: justify;
+        color: #343434;
+        font-weight: 700;
+        margin-bottom: 64m;
+    }
+    .formating_font{
+        font-size: 1.5em;
+    }
+}
