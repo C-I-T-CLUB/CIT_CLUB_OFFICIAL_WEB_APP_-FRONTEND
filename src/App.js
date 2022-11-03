@@ -1,4 +1,7 @@
 import { Route, Routes } from "react-router-dom";
+import Header from "./components/Header";
+import Hero from  "./components/Hero";
+import Footer from  "./components/Footer";
 import Home from "./pages/Home";
 import Event from "./pages/Event";
 import Login from "./pages/Login";
@@ -24,6 +27,8 @@ function App() {
   }
   return (
     <>
+        <Header />
+        <Hero />
         <Routes>
             <Route path="/" element={<Home />} />
             <Route path="*" element={<h1>404 Not Found</h1>} />
@@ -42,6 +47,7 @@ function App() {
             <Route path="/Resources/TechInterviews" element={<TechInterviews />} />
             <Route path="/FindDeveloper" element={<FindDeveloper />} />
         </Routes>
+        <Footer />
     </>
   );
 }
