@@ -1,5 +1,4 @@
 import React from 'react'
-import Header from '../components/Header'
 import Footer from '../components/Footer'
 import { Loader } from '../components/Loader'
 import { Fragment } from 'react'
@@ -13,7 +12,6 @@ function SignUp() {
   const {mutateAsync:signupMutation,isError} = useSignupMutation()
   return (
     <>
-        <Header/>
         <div className="modernForm">
   <div className="imageSection">
       <div className="overlay"></div>

@@ -13,36 +13,26 @@ body{
   background-color: #f8f8ff;
 }
 /* Styling the header section backgound */
-.header{
-  position: relative;
-  /* background: linear-gradient(to right,#717894af 40%, #717c94a8 60%), url(../images/header-bacground.jpg); */ /* background-repeat: no-repeat;
-  background-size: cover;
-  height: 90vh; */
-  padding: 0px 0px 0px 0px;
-  margin-bottom: 0;
-  height: 10vh;
-}
+
 /* styling the  navigations divisions */
 .row_nav{
-  display: grid;
-  grid-template-columns: 10vh 90% ;
-  column-gap: .2em;
-  justify-content: center;
+  display: flex;
+  justify-content: space-evenly;
   align-items: center;
-  
+  width: 100%;
 }
 /* Styling logo */
-.logo_style{
-  width: 100%;
+.logo_style img{
+  width: 30%;
 }
 /* styling the listing navigation */
 .nav_column__row{
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  
   justify-content: space-evenly;
   align-items: center;
+  width: 100%;
   /* width: 100%; */
 }
 /* Styling the navigation list */
@@ -134,4 +124,101 @@ ul .btn_login_white{
   padding: 2%;
   font-size: 1.2em;
   font-weight: 500;
+}
+@media screen and (max-width: 768px){
+ 
+}
+:root {
+	--mainColor: transparent;
+	--mainColorLight: #5767aa;
+	--secondaryColor: #db2b39;
+	--textColor: #eee;
+}
+
+header {
+	display: flex;
+  position: relative;
+	align-items: center;
+	justify-content: space-between;
+	height: 80px;
+	padding: 0 2rem;
+	background-color: var(--mainColor);
+	color: var(--textColor);
+}
+
+
+
+header .nav-btn {
+	padding: 5px;
+	cursor: pointer;
+	background: transparent;
+	border: none;
+	outline: none;
+	color: var(--textColor);
+	visibility: hidden;
+	opacity: 0;
+	font-size: 1.8rem;
+}
+
+header div,
+nav {
+	display: flex;
+	align-items: center;
+}
+.md-sc{
+  display: none;
+}
+
+@media only screen and (max-width: 1024px) {
+	header .nav-btn {
+		visibility: visible;
+		opacity: 1;
+	}
+  .nav_column__row{
+    display: none;
+  }
+  .md-sc{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+  }
+  .md-sc a{
+    color: #F7F7F7;
+    font-size: x-large;
+    margin-bottom: 10px;
+  }
+	header nav {
+		position: fixed;
+		top: 0;
+		left: 0;
+		height: 100%;
+		width: 100%;
+		display: flex;
+    z-index: 999999;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		gap: 1.5rem;
+		background-color: #012456;
+		transition: 1s;
+		transform: translateY(-100vh);
+	}
+
+	header .responsive_nav {
+		transform: none;
+	}
+
+	nav .nav-close-btn {
+		position: absolute;
+		top: 2rem;
+		right: 2rem;
+	}
+
+	nav a {
+		font-size: 1.5rem;
+	}
+  nav i{
+    font-size: 3.5rem;
+  }
 }

@@ -1,7 +1,6 @@
 import { Formik } from "formik";
 import React, { Fragment } from "react";
 import Footer from "../components/Footer";
-import Header from "../components/Header";
 import '../assets/css/Registration.css';
 import * as Yup from "yup";
 import { Loader } from "../components/Loader";
@@ -15,7 +14,6 @@ function Registration() {
   const {mutateAsync:joinCitMutation,isError} = useJoinCitMutation()
   return (
     <>
-      <Header />
       <div className="modernForm">
   <div className="imageSection">
       <div className="overlay"></div>

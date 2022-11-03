@@ -1,6 +1,5 @@
 import React, { Fragment } from 'react'
 import "../assets/css/Registration.css"
-import Header from '../components/Header'
 import Footer from '../components/Footer'
 import * as Yup from 'yup';
 import { Formik } from 'formik';
@@ -20,7 +19,6 @@ function Login() {
   })
   return (
     <>
-    <Header/>
     <Fragment>
     <div className="modernForm">
   <div className="imageSection">
